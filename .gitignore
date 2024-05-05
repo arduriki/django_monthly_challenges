@@ -1,0 +1,29 @@
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media
+
+# Backup files #
+*.bak
+
+# If you are using PyCharm #
+.idea/
+
+# If you are using virtualenv #
+venv/
+env/
+*.pyc
+
+# If you are using Docker #
+*.env
+docker-compose.override.yml
+
+# If you are using macOS #
+.DS_Store
+
+# Visual Studio Code #
+.vscode/
