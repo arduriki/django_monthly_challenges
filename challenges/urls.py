@@ -4,8 +4,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    # first argument: string that describes the url to be supported.
-    # second argument: pointer at the view function.
-    path("january", views.index)
-    # URL configured and which view to be executed.
+    path("", views.index),  # /challenges/
+    # int or str to specify which value should enter.
+    path("<int:month>", views.monthly_challenge_by_number),
+    # give a name to the url to construct paths
+    path("<str:month>", views.monthly_challenge, name="month-challenge")  # name parameter added
 ]
