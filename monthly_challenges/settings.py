@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # my own apps / modules and make it aware in the project
+    'challenges',
+    # build-in apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +57,12 @@ ROOT_URLCONF = 'monthly_challenges.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # add directories path that will go to the templates
+        'DIRS': [
+            # BASE_DIR / "challenges" / "templates"
+            BASE_DIR / "templates"
+        ],
+        # Look for templates folders in the apps folders
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

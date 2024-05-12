@@ -4,7 +4,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.index),  # /challenges/
+    path("", views.index, name="index"),  # /challenges/
     # int or str to specify which value should enter.
     path("<int:month>", views.monthly_challenge_by_number),
     # give a name to the url to construct paths
